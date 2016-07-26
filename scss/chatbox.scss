@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,300');
+
+body {
+	font-family: 'Fira Sans', sans-serif;
+	background: url('../img/bg1.png');
+	font-size: 14px
+}
+.chat-app {
+	max-width: 1080px;
+	height: 700px;
+	margin: 20px auto;
+	overflow: hidden;
+	background: #fff;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75)
+}
+.header-app {
+	left: 0;
+	right: 0;
+	height: 80px;
+	z-index: 1005;
+	background: #1eb6d2;
+	color: white;
+
+	.navbar-header {
+		padding: 17.5px 10px;
+
+		span {
+			position: relative;
+			font-size: 30px
+		}
+		.img-contact {
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-bottom: 10px
+		}
+	}
+	.header-left {
+		width: 26%;
+		float: left;
+		border-right: 1px solid #cdd2d5
+	}
+	.header-right {
+		width: 74%;
+		float: right;
+
+		span {
+			padding-left: 20px
+		}
+		img {
+			padding-right: 0
+		}
+		.online-status {
+				padding: 5px;
+    margin-right: 50px
+		}
+	}
+}
+.btn-round {
+	border-radius: 10px;
+	background: #1ba3bd;
+	border: .0625rem solid transparent;
+	font-size: 12px;
+
+	&:hover, &:focus {
+		border-radius: 10px;
+		border: .0625rem solid transparent
+	}
+}
+.content-app {
+	background: white;
+	margin-top: 1px
+}
+.contact-section {
+	width: 26%;
+	float: left;
+	border-right: 1px solid #cdd2d5
+}
+.filter-box {
+	background: #f3f8f9;
+	height: 50px;
+	border-bottom: 1px solid #cdd2d5;
+
+	.filter {
+		padding: 10px;
+
+		span {
+			position: absolute;
+			padding-top: 5px;
+			padding-left: 10px
+		}
+		input {
+			padding-left: 30px
+		}
+	}
+	.form-control {
+		height: 30px;
+		border-radius: 0
+	}
+}
+.name-box {
+	font-size: 18px;
+	height: 570px;
+	margin: 0;
+	overflow-y: auto;
+	padding: 0;
+
+	.name-list-item {
+		list-style: none;
+		padding: 10px;
+		height: 60px;
+		cursor: pointer;
+
+		&:hover, &.active {
+			background-color: #dce6e8
+		}
+		&.active:hover {
+			background-color: #dce6e8
+		}
+		img {
+			height: 40px;
+			width: 40px;
+			border-radius: 5px
+		}
+		.name-item {
+			span {
+				padding-left: 10px;
+				color: #343434;
+				text-decoration: none
+			}
+			&:hover {
+				text-decoration: none
+			}
+		}
+	}
+}
+.message-section {
+	width: 74%;
+	float: right;
+
+	.message-list {
+		height: 553px;
+		margin: 0;
+		overflow-y: auto;
+		padding: 0
+	}
+}
+.media {
+	padding: 20px;
+	padding-top: 0;
+	border-bottom: solid 1px #eef1f2;
+	&:hover .delete-message {
+		display: block;
+	}
+	.delete-message {
+		outline: none;
+		border: none;
+		background-color: transparent;
+		display: none;
+		img {
+			width: 20px;
+			height: 20px;
+			cursor: pointer
+		}
+	}
+	.text-message {
+		margin-left: -15px
+	}
+	.editing {
+		padding: 0;
+		display: none;
+
+		.view {
+			display: none
+		}
+	}
+	.edit {
+		display: block;
+		width: 100%;
+		z-index: 9999;
+		min-height: 50px
+	}
+	&:first-child {
+		margin-top: 10px
+	}
+	.media-left {
+		padding-right: 30px
+	}
+	img {
+		width: 70px;
+		height: 70px
+	}
+	.media-body {
+		.media-heading {
+			font-size: 20px;
+			color: #1eb6d2
+		}
+	}
+
+}
+.chat-form {
+	height: 60px;
+	border-top: 1px solid #cdd2d5;
+
+	.input-group {
+		padding: 10px;
+
+		.form-gim {
+			position: absolute;
+			margin-left: -30px;
+			z-index: 10;
+			margin-top: 10px
+		}
+	}
+	.input-group-addon {
+		border-radius: 0;
+		border: none;
+		background: #1eb6d2;
+		height: 40px;
+		margin-left: 10px;
+		width: 80px
+	}
+	.form-control {
+		height: 40px;
+		border-radius: 0;
+		width: 680px
+	}
+}
+
+.fa {
+	padding-right: 10px;
+}
+
+.search-conversation-form {
+	.input-group-addon {
+		background: transparent;
+	}
+}
+
+#modal-new-conversation {
+	.media {
+		border-bottom: none;
+	}
+}
+
+.modal {
+	.modal-title {
+		color: #333;
+	}
+}
+
+.delete-thread {
+	img {
+		width: 12px !important;
+		height: 12px !important;
+	}
+}
+
+.avatar-online {
+	width: 34px;
+	height: 34px;
+}
+
+/**
+ * Tooltip Styles
+ */
+
+/* Base styles for the element that has a tooltip */
+[data-tooltip],
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Base styles for the entire tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: 
+      opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out,
+        -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+    -moz-transition:    
+        opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out,
+        -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+    transition:         
+        opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out,
+        transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform:    translate3d(0, 0, 0);
+  transform:         translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+/* Show the entire tooltip on hover and focus */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  border-radius: 10px;
+}
+
+/* Base styles for the tooltip's directional arrow */
+.tooltip:before,
+[data-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+  border-radius: 10px;
+}
+
+/* Base styles for the tooltip's content area */
+.tooltip:after,
+[data-tooltip]:after {
+  z-index: 1000;
+  padding: 4px;
+  width: 160px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 14px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Directions */
+
+/* Top (default) */
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after,
+.tooltip-top:before,
+.tooltip-top:after {
+  bottom: 100%;
+  left: 50%;
+}
+
+[data-tooltip]:before,
+.tooltip:before,
+.tooltip-top:before {
+  margin-left: -6px;
+  margin-bottom: -12px;
+  border-top-color: #000;
+  border-top-color: hsla(0, 0%, 20%, 0.9);
+}
+
+/* Horizontally align top/bottom tooltips */
+[data-tooltip]:after,
+.tooltip:after,
+.tooltip-top:after {
+  margin-left: -80px;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after,
+.tooltip-top:hover:before,
+.tooltip-top:hover:after,
+.tooltip-top:focus:before,
+.tooltip-top:focus:after {
+  -webkit-transform: translateY(-12px);
+  -moz-transform:    translateY(-12px);
+  transform:         translateY(-12px); 
+}
+
+/* Left */
+.tooltip-left:before,
+.tooltip-left:after {
+  right: 100%;
+  bottom: 50%;
+  left: auto;
+}
+
+.tooltip-left:before {
+  margin-left: 0;
+  margin-right: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-left-color: #000;
+  border-left-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-left:hover:before,
+.tooltip-left:hover:after,
+.tooltip-left:focus:before,
+.tooltip-left:focus:after {
+  -webkit-transform: translateX(-12px);
+  -moz-transform:    translateX(-12px);
+  transform:         translateX(-12px); 
+}
+
+/* Bottom */
+.tooltip-bottom:before,
+.tooltip-bottom:after {
+  top: 100%;
+  bottom: auto;
+  left: 50%;
+}
+
+.tooltip-bottom:before {
+  margin-top: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-bottom-color: #000;
+  border-bottom-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-bottom:hover:before,
+.tooltip-bottom:hover:after,
+.tooltip-bottom:focus:before,
+.tooltip-bottom:focus:after {
+  -webkit-transform: translateY(12px);
+  -moz-transform:    translateY(12px);
+  transform:         translateY(12px); 
+}
+
+/* Right */
+.tooltip-right:before,
+.tooltip-right:after {
+  bottom: 50%;
+  left: 100%;
+}
+
+.tooltip-right:before {
+  margin-bottom: 0;
+  margin-left: -12px;
+  border-top-color: transparent;
+  border-right-color: #000;
+  border-right-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-right:hover:before,
+.tooltip-right:hover:after,
+.tooltip-right:focus:before,
+.tooltip-right:focus:after {
+  -webkit-transform: translateX(12px);
+  -moz-transform:    translateX(12px);
+  transform:         translateX(12px); 
+}
+
+/* Move directional arrows down a bit for left/right tooltips */
+.tooltip-left:before,
+.tooltip-right:before {
+  top: 3px;
+}
+
+/* Vertically center tooltip content for left/right tooltips */
+.tooltip-left:after,
+.tooltip-right:after {
+  margin-left: 0;
+  margin-bottom: -16px;
+}
+
+@for $i from 0 through 12 {
+  .pd-#{$i * 5} {
+    padding: #{$i * 5}px !important;
+  }
+  .pt-#{$i * 5} {
+    padding-top: #{$i * 5}px !important;
+  }
+  .pb-#{$i * 5} {
+    padding-bottom: #{$i * 5}px !important;
+  }
+  .pl-#{$i * 5} {
+    padding: 0 !important;
+  }
+  .pr-#{$i * 5} {
+    padding-right: #{$i * 5}px !important;
+  }
+  .plr-#{$i * 5} {
+    padding-left: #{$i * 5}px !important;
+    padding-right: #{$i * 5}px !important;
+  }
+  .ptb-#{$i * 5} {
+    padding-top: #{$i * 5}px !important;
+    padding-bottom: #{$i * 5}px !important;
+  }
+  .mg-#{$i * 5} {
+    margin: #{$i * 5}px !important;
+  }
+  .mt-#{$i * 5} {
+    margin-top: #{$i * 5}px !important;
+  }
+  .mb-#{$i * 5} {
+    margin-bottom: #{$i * 5}px !important;
+  }
+  .ml-#{$i * 5} {
+    margin-left: #{$i * 5}px !important;
+  }
+  .mr-#{$i * 5} {
+    margin-right: #{$i * 5}px !important;
+  }
+  .mlr-#{$i * 5} {
+    margin-left: #{$i * 5}px !important;
+    margin-right: #{$i * 5}px !important;
+  }
+  .mtb-#{$i * 5} {
+    margin-top: #{$i * 5}px !important;
+    margin-bottom: #{$i * 5}px !important;
+  }
+}
